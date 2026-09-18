@@ -1,7 +1,8 @@
 # Блок конфигурации для проекта Kittygram
 server {
     listen 80;
-    listen 443;
+    listen 443 ssl;
+    ssl_reject_handshake on;
     server_name kittygram.artemii-project.ddns.net;
 
     # Максимальный размер загружаемых фоток котиков по ТЗ
@@ -35,7 +36,8 @@ server {
 # Блок конфигурации для проекта Taski
 server {
     listen 80;
-    listen 443;
+    listen 443 ssl;
+    ssl_reject_handshake on;
     server_name taski.artemii-project.ddns.net;
 
     location / {
