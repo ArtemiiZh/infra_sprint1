@@ -112,3 +112,5 @@ REST_FRAMEWORK = {
     'PAGE_SIZE': 10,
 
 }
+
+CSRF_TRUSTED_ORIGINS = ['https://artemii-kittygram.ddns.net']
