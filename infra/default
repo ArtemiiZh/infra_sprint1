@@ -28,11 +28,11 @@ server {
 
     # Статика и медиа (отдаём напрямую, без Django)
     location /static/ {
-        alias /app/static/;
+        alias /home/ubuntu/infra_sprint1/frontend/build/static/;
     }
 
     location /media/ {
-        alias /app/media/;
+        alias /home/ubuntu/infra_sprint1/backend/media/;
     }
 
     # Taski на пути /taski/
