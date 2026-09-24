@@ -1,11 +1,18 @@
 import os
 from pathlib import Path
 
-from dotenv import load_dotenv
-
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-load_dotenv(BASE_DIR / '.env')
+# Простой парсер .env (без внешних зависимостей)
+env_file = BASE_DIR / '.env'
+if env_file.exists():
+    with open(env_file, encoding='utf-8') as f:
+        for line in f:
+            line = line.strip()
+            if not line or line.startswith('#') or '=' not in line:
+                continue
+            key, value = line.split('=', 1)
+            os.environ.setdefault(key.strip(), value.strip())
 
 SECRET_KEY = os.getenv('SECRET_KEY', 'django-insecure-kitty-super-secret-key-2026')
 
