@@ -1,5 +1,5 @@
 IP: 51.250.32.249;
-name_taski: https://artemii-taski-2.dynv6.net;
+name_taski: https://artemii-taski-2026.dns.army;
 name_kittygram: https://artemii-kittygram.ddns.net;
 login: admin;
 password: admin_password123;

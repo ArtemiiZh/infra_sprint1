@@ -51,9 +51,9 @@ server {
 # =============================================================
 server {
     listen 443 ssl;
-    server_name artemii-taski-2.dynv6.net;
-    ssl_certificate /etc/letsencrypt/live/artemii-taski-2.dynv6.net/fullchain.pem;
-    ssl_certificate_key /etc/letsencrypt/live/artemii-taski-2.dynv6.net/privkey.pem;
+    server_name artemii-taski-2026.dns.army;
+    ssl_certificate /etc/letsencrypt/live/artemii-taski-2026.dns.army/fullchain.pem;
+    ssl_certificate_key /etc/letsencrypt/live/artemii-taski-2026.dns.army/privkey.pem;
 
     location /api/ {
         proxy_pass http://127.0.0.1:8000;
@@ -74,7 +74,7 @@ server {
     }
 
     location /static/ {
-        alias /home/ubuntu/taski/backend/static/;
+        alias /var/www/taski/static/;
     }
 
     location / {
@@ -86,6 +86,6 @@ server {
 
 server {
     listen 80;
-    server_name artemii-taski-2.dynv6.net;
+    server_name artemii-taski-2026.dns.army;
     return 301 https://$host$request_uri;
 }
