@@ -51,9 +51,9 @@ server {
 # =============================================================
 server {
     listen 443 ssl;
-    server_name artemii-taski-2026.dns.army;
-    ssl_certificate /etc/letsencrypt/live/artemii-taski-2026.dns.army/fullchain.pem;
-    ssl_certificate_key /etc/letsencrypt/live/artemii-taski-2026.dns.army/privkey.pem;
+    server_name 51-250-32-249.nip.io;
+    ssl_certificate /etc/letsencrypt/live/51-250-32-249.nip.io/fullchain.pem;
+    ssl_certificate_key /etc/letsencrypt/live/51-250-32-249.nip.io/privkey.pem;
 
     location /api/ {
         proxy_pass http://127.0.0.1:8000;
